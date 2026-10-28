@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siti Arum | Portofolio Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        pastelPink: {
+                            100: '#FFF0F2',
+                            200: '#FDE2E4',
+                            300: '#F8EDEB',
+                            400: '#F4ACB7',
+                            500: '#D88392',
+                        },
+                        softYellow: {
+                            100: '#FEFDF6',
+                            200: '#FEF9E7',
+                            300: '#FFF1E6',
+                            400: '#FDE087',
+                            500: '#EAB308',
+                        },
+                        charcoal: '#2D3748',
+                        softDark: '#1A202C',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-12px) rotate(2deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FEF9E7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #F4ACB7;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D88392;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(253, 226, 228, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-[#FAF8F5] text-slate-800 font-sans antialiased selection:bg-pastelPink-200 selection:text-slate-900 leading-relaxed overflow-x-hidden">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <nav class="glass-card rounded-2xl px-6 py-3 flex items-center justify-between shadow-sm border border-pastelPink-200/50">
+                <!-- Brand / Logo -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-pastelPink-200 to-softYellow-300 flex items-center justify-center font-bold text-slate-800 text-lg shadow-sm group-hover:scale-105 transition-transform">
+                        SA
+                    </span>
+                    <span class="font-bold text-slate-800 text-lg tracking-tight group-hover:text-pastelPink-500 transition-colors">
+                        Siti Arum<span class="text-pastelPink-400">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                    <a href="#about" class="hover:text-slate-900 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-pastelPink-400 hover:after:w-full after:transition-all">Tentang</a>
+                    <a href="#experience" class="hover:text-slate-900 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-pastelPink-400 hover:after:w-full after:transition-all">Pengalaman</a>
+                    <a href="#education" class="hover:text-slate-900 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-pastelPink-400 hover:after:w-full after:transition-all">Pendidikan &amp; Proyek</a>
+                    <a href="#certifications" class="hover:text-slate-900 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-pastelPink-400 hover:after:w-full after:transition-all">Sertifikasi</a>
+                    <a href="#contact" class="hover:text-slate-900 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-pastelPink-400 hover:after:w-full after:transition-all">Kontak</a>
+                </div>
+
+                <!-- Action Button Desktop -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all hover:shadow-md hover:-translate-y-0.5 active:translate-y-0">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-pastelPink-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden max-w-7xl mx-auto px-6 pt-2 pb-4">
+            <div class="glass-card rounded-2xl p-6 flex flex-col gap-4 shadow-xl border border-pastelPink-200">
+                <a href="#about" class="mobile-link py-2 border-b border-slate-100 font-medium text-slate-700 hover:text-pastelPink-500">Tentang</a>
+                <a href="#experience" class="mobile-link py-2 border-b border-slate-100 font-medium text-slate-700 hover:text-pastelPink-500">Pengalaman</a>
+                <a href="#education" class="mobile-link py-2 border-b border-slate-100 font-medium text-slate-700 hover:text-pastelPink-500">Pendidikan &amp; Proyek</a>
+                <a href="#certifications" class="mobile-link py-2 border-b border-slate-100 font-medium text-slate-700 hover:text-pastelPink-500">Sertifikasi</a>
+                <a href="#contact" class="mobile-link py-2 font-medium text-slate-700 hover:text-pastelPink-500">Kontak</a>
+                <a href="#contact" class="mobile-link mt-2 text-center py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen pt-32 pb-20 flex items-center relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-pastelPink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-softYellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-80 animate-float-delayed pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-softYellow-300/60 text-amber-900 font-semibold text-xs tracking-wide uppercase border border-softYellow-400/40">
+                        <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+                        A journey of knowledge, care &amp; impact
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                        Siti Arum<span class="text-pastelPink-500">.</span><br/>
+                        <span class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-700 mt-2 block">
+                            Administrasi • Kesekretariatan • Pengelolaan Data • Operasional
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal">
+                        Fresh Graduate S1 Sistem Informasi (IPK 3,66) dengan pengalaman kerja 7+ tahun di Koperasi Syariah Islamic Centre Bekasi. Berorientasi pada ketelitian, efisiensi administrasi, dan pengembangan sistem informasi berbasis web.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#experience" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900 text-white font-medium shadow-md hover:bg-slate-800 hover:shadow-lg transition-all text-center">
+                            Lihat Pengalaman Kerja <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-pastelPink-200 text-slate-800 font-medium hover:bg-pastelPink-300 border border-pastelPink-300 transition-all text-center">
+                            Hubungi Saya
+                        </a>
+                    </div>
+
+                    <!-- Highlight Stats -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-200/60 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">7+ <span class="text-pastelPink-500">Thn</span></p>
+                            <p class="text-xs text-slate-500 font-medium">Pengalaman Kerja</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">3,66 <span class="text-amber-500">IPK</span></p>
+                            <p class="text-xs text-slate-500 font-medium">S1 Sistem Informasi</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">3 <span class="text-pastelPink-500">Sertifikat</span></p>
+                            <p class="text-xs text-slate-500 font-medium">Oracle, SAP &amp; Cisco</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual / Avatar Frame -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-80 sm:w-80 sm:h-96 md:w-80 md:h-[26rem]">
+                        <div class="absolute inset-0 bg-pastelPink-200 rounded-3xl rotate-6 transition-transform hover:rotate-3 duration-500"></div>
+                        <div class="absolute inset-0 bg-softYellow-300 rounded-3xl -rotate-3 transition-transform hover:-rotate-1 duration-500"></div>
+                        
+                        <div class="relative w-full h-full glass-card rounded-3xl p-6 shadow-xl flex flex-col items-center justify-center text-center overflow-hidden border border-white">
+                            <div class="w-36 h-44 rounded-2xl bg-slate-100 mb-4 overflow-hidden border-4 border-white shadow-md">
+                                <img src="FOTO-SITI-ARUM.jpg" 
+                                     alt="Foto Siti Arum" 
+                                     class="w-full h-full object-cover object-top"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/400x500/FDE2E4/2D3748?text=Siti+Arum';">
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900">Siti Arum</h2>
+                            <p class="text-xs font-semibold text-pastelPink-500 uppercase tracking-widest mt-1">S1 Sistem Informasi • Bekasi</p>
+                            
+                            <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                                <span class="px-3 py-1 bg-softYellow-200 rounded-full text-xs text-amber-800 font-medium">💼 Admin Specialist</span>
+                                <span class="px-3 py-1 bg-pastelPink-100 rounded-full text-xs text-rose-800 font-medium">💻 IT &amp; Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-white/70 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-pastelPink-500 bg-pastelPink-100 px-3 py-1 rounded-full">Tentang Saya</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-3">Komitmen, Ketelitian &amp; Dedikasi</h2>
+                <div class="w-12 h-1 bg-softYellow-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Narrative -->
+                <div class="lg:col-span-6 space-y-5">
+                    <h3 class="text-2xl font-bold text-slate-900 leading-snug">
+                        Lebih dari 7 tahun berkembang di Koperasi Syariah Islamic Centre Bekasi.
+                    </h3>
+                    <p class="text-slate-600">
+                        Sejak tahun 2019, saya dipercaya memegang 3 peran penting yang berbeda: mulai dari Kasir, Staf Kesekretariatan, hingga Staf Bidang Usaha. Setiap perpindahan lini pekerjaan telah memperluas pemahaman saya mengenai operasional koperasi secara menyeluruh—mulai dari pengelolaan transaksi kas, administrasi dokumen &amp; surat-menyurat, hingga rekapitulasi usaha dan inventaris e-catalog.
+                    </p>
+                    <p class="text-slate-600">
+                        Didukung latar belakang pendidikan D3 Komputerisasi Akuntansi dan S1 Sistem Informasi, saya menggabungkan pemahaman proses bisnis dengan kecakapan teknologi informasi untuk menghasilkan tata kelola administrasi yang rapi dan terstruktur.
+                    </p>
+                    
+                    <div class="p-4 rounded-2xl bg-softYellow-200/60 border border-softYellow-300 text-slate-800 flex items-start gap-4">
+                        <i class="fa-solid fa-quote-left text-2xl text-amber-500 mt-1"></i>
+                        <p class="text-sm italic">
+                            "Ketelitian dan disiplin dalam administrasi adalah kunci utama dalam menjaga integritas operasional dan kepercayaan lembaga."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Skills & Expertise Grid -->
+                <div class="lg:col-span-6">
+                    <div class="glass-card rounded-3xl p-8 shadow-sm border border-pastelPink-200 space-y-6">
+                        <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-500"></i> Keahlian Utamaku
+                        </h3>
+
+                        <!-- Technical Skills -->
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Keahlian Teknis</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Microsoft Office</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Administrasi Perkantoran</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Pengolahan Data &amp; Data Entry</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Penyusunan Laporan</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Pengarsipan &amp; Surat-Menyurat</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Administrasi Penggajian</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Inventaris &amp; Stock Opname</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-softYellow-200 text-amber-900 text-xs font-semibold">Dasar Sistem Informasi &amp; Basis Data</span>
+                            </div>
+                        </div>
+
+                        <!-- Non-Technical Skills -->
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Keahlian Non-Teknis</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3.5 py-1.5 rounded-full bg-pastelPink-200 text-rose-900 text-xs font-semibold">Teliti &amp; Cermat</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-pastelPink-200 text-rose-900 text-xs font-semibold">Komunikasi &amp; Kerja Tim</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-pastelPink-200 text-rose-900 text-xs font-semibold">Manajemen Waktu</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-pastelPink-200 text-rose-900 text-xs font-semibold">Disiplin &amp; Bertanggung Jawab</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-pastelPink-200 text-rose-900 text-xs font-semibold">Pelayanan Pelanggan</span>
+                                <span class="px-3.5 py-1.5 rounded-full bg-pastelPink-200 text-rose-900 text-xs font-semibold">Adaptif &amp; Cepat Belajar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section id="experience" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-600 bg-softYellow-200 px-3 py-1 rounded-full">Pengalaman Kerja</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-3">Rekam Jejak Profesional</h2>
+                <p class="text-slate-600 text-sm mt-2">Koperasi Jasa Syariah Islamic Centre Bekasi (2019 – Sekarang)</p>
+            </div>
+
+            <!-- Vertical Experience Cards -->
+            <div class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Position 1 -->
+                <div class="glass-card p-8 rounded-3xl border border-softYellow-300 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-amber-900 bg-softYellow-200 px-3 py-1 rounded-full">Feb 2026 – Sekarang</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2">Staf Bidang Usaha</h3>
+                            <p class="text-sm font-semibold text-slate-500">Koperasi Jasa Syariah Islamic Centre Bekasi</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-2xl bg-softYellow-300 flex items-center justify-center text-amber-800 text-xl font-bold">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li>Mengelola seluruh administrasi usaha serta rekapitulasi setoran bulanan (parkir, member, dan ritel).</li>
+                        <li>Mengatur inventarisasi e-catalog produk serta pelaksanaan kegiatan stock opname secara periodik.</li>
+                        <li>Menyusun laporan perkembangan usaha bulanan dan tahunan untuk kebutuhan evaluasi manajemen.</li>
+                    </ul>
+                </div>
+
+                <!-- Position 2 -->
+                <div class="glass-card p-8 rounded-3xl border border-pastelPink-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-rose-900 bg-pastelPink-100 px-3 py-1 rounded-full">Okt 2023 – Feb 2026</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2">Staf Kesekretariatan</h3>
+                            <p class="text-sm font-semibold text-slate-500">Koperasi Jasa Syariah Islamic Centre Bekasi</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-2xl bg-pastelPink-200 flex items-center justify-center text-rose-800 text-xl font-bold">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li>Bertanggung jawab penuh atas pengarsipan dokumen fisik maupun sistem digital koperasi secara rapi dan aman.</li>
+                        <li>Mengelola korespondensi formal: penyusunan surat-menyurat, berita acara rapat, serta nota dinas internal.</li>
+                        <li>Menangani penyusunan kontrak kerja karyawan serta membantu kelancaran administrasi penggajian bulanan.</li>
+                    </ul>
+                </div>
+
+                <!-- Position 3 -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">Feb 2019 – Apr 2023</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-2">Kasir</h3>
+                            <p class="text-sm font-semibold text-slate-500">Koperasi Jasa Syariah Islamic Centre Bekasi</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-700 text-xl font-bold">
+                            <i class="fa-solid fa-cash-register"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li>Melakukan pencatatan seluruh transaksi penjualan secara terkomputerisasi dengan akurasi tinggi.</li>
+                        <li>Pemeriksaan harian terhadap keseimbangan saldo kas tunai dan laporan transaksi.</li>
+                        <li>Memberikan pelayanan pelanggan secara profesional, ramah, dan solutif.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION & PROJECTS SECTION -->
+    <section id="education" class="py-24 bg-white/80 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-pastelPink-500 bg-pastelPink-100 px-3 py-1 rounded-full">Pendidikan &amp; Proyek</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-3">Latar Belakang Akademis</h2>
+                <p class="text-slate-600 text-sm mt-2">Integrasi Ilmu Akuntansi &amp; Perancangan Sistem Informasi</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- S1 Education & Skripsi -->
+                <div class="glass-card p-8 rounded-3xl border border-pastelPink-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="px-3 py-1 rounded-full bg-pastelPink-100 text-rose-900 text-xs font-bold">2024 – 2026</span>
+                                <h3 class="text-2xl font-bold text-slate-900 mt-3">S1 Sistem Informasi</h3>
+                                <p class="text-sm font-semibold text-slate-600">Universitas Bani Saleh</p>
+                            </div>
+                            <span class="text-lg font-bold text-pastelPink-500 bg-white px-3 py-1.5 rounded-xl border border-pastelPink-200 shadow-sm">
+                                IPK 3,66 / 4,00
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium mb-4"><i class="fa-solid fa-graduation-cap text-amber-500 mr-1"></i> Yudisium: 28 Agustus 2026</p>
+                        
+                        <div class="mt-6 pt-6 border-t border-slate-100 space-y-2">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Skripsi S1</span>
+                            <h4 class="text-base font-bold text-slate-800">Perancangan Sistem Informasi E-Arsip Berbasis Web</h4>
+                            <p class="text-sm text-slate-600">Studi Kasus: Koperasi Jasa Syariah Islamic Centre Bekasi. Membangun platform e-arsip terpusat untuk mempermudah digitalisasi dan pengarsipan surat/dokumen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D3 Education & Tugas Akhir -->
+                <div class="glass-card p-8 rounded-3xl border border-softYellow-300 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="px-3 py-1 rounded-full bg-softYellow-200 text-amber-900 text-xs font-bold">2019 – 2022</span>
+                                <h3 class="text-2xl font-bold text-slate-900 mt-3">D3 Komputerisasi Akuntansi</h3>
+                                <p class="text-sm font-semibold text-slate-600">STMIK Bani Saleh</p>
+                            </div>
+                            <span class="text-lg font-bold text-amber-700 bg-white px-3 py-1.5 rounded-xl border border-softYellow-300 shadow-sm">
+                                IPK 3,63 / 4,00
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium mb-4"><i class="fa-solid fa-award text-amber-500 mr-1"></i> Lulus Tepat Waktu</p>
+                        
+                        <div class="mt-6 pt-6 border-t border-slate-100 space-y-2">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Tugas Akhir D3</span>
+                            <h4 class="text-base font-bold text-slate-800">Perancangan Sistem Informasi Penggajian Karyawan Berbasis Web</h4>
+                            <p class="text-sm text-slate-600">Studi Kasus: Koperasi Jasa Syariah Islamic Centre Bekasi. Mengembangkan sistem otomasisasi slip gaji dan rekapitulasinya untuk meningkatkan efisiensi waktu.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS & ORGANIZATIONS SECTION -->
+    <section id="certifications" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-600 bg-softYellow-200 px-3 py-1 rounded-full">Sertifikasi &amp; Kegiatan</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-3">Kompetensi Tambahan</h2>
+            </div>
+
+            <!-- Certifications Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                
+                <!-- Cert 1 -->
+                <div class="glass-card p-6 rounded-3xl border border-pastelPink-200 hover:-translate-y-1 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-pastelPink-200 flex items-center justify-center text-rose-800 text-xl font-bold mb-4">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <span class="text-xs font-bold text-slate-400 uppercase">Oracle Academy • 2021</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1">Database Design</h3>
+                    <p class="text-xs text-slate-600 mt-2">Sertifikasi resmi perancangan skema basis data relational, ERD, dan normalisasi data.</p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="glass-card p-6 rounded-3xl border border-softYellow-300 hover:-translate-y-1 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-softYellow-300 flex items-center justify-center text-amber-800 text-xl font-bold mb-4">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <span class="text-xs font-bold text-slate-400 uppercase">SAP UPP / Edugate • 2021</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1">SAP01 – SAP Overview</h3>
+                    <p class="text-xs text-slate-600 mt-2">Pemahaman fundamental modul Enterprise Resource Planning (ERP) sistem SAP.</p>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="glass-card p-6 rounded-3xl border border-pastelPink-200 hover:-translate-y-1 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-pastelPink-200 flex items-center justify-center text-rose-800 text-xl font-bold mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <span class="text-xs font-bold text-slate-400 uppercase">Cisco Networking Academy • 2022</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1">IT Essentials</h3>
+                    <p class="text-xs text-slate-600 mt-2">Kompetensi dasar perangkat keras, sistem operasi, jaringan komputer &amp; troubleshooting IT.</p>
+                </div>
+
+            </div>
+
+            <!-- Organizational Experience -->
+            <div class="glass-card rounded-3xl p-8 border border-slate-200 max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-users text-amber-500"></i> Pengalaman Organisasi &amp; Seminar
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-100">
+                        <span class="text-xs font-semibold text-pastelPink-500">8 Nov 2020</span>
+                        <h4 class="font-bold text-slate-800 mt-1">Panitia Workshop MYOB Accounting</h4>
+                        <p class="text-xs text-slate-500 mt-1">STMIK Bani Saleh • Tema: “With MYOB We Shape a Quality Future”</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-100">
+                        <span class="text-xs font-semibold text-amber-600">24 – 26 Jan 2020</span>
+                        <h4 class="font-bold text-slate-800 mt-1">Peserta Training Organization</h4>
+                        <p class="text-xs text-slate-500 mt-1">Jurusan D3 Komputerisasi Akuntansi • Pelatihan Komunikasi &amp; Kerja Tim</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-100">
+                        <span class="text-xs font-semibold text-pastelPink-500">18 Jan 2020</span>
+                        <h4 class="font-bold text-slate-800 mt-1">Seminar Nasional Character Building</h4>
+                        <p class="text-xs text-slate-500 mt-1">WIMNUS • “Industrial 4.0, Indonesia Mandiri 2034”</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-100">
+                        <span class="text-xs font-semibold text-amber-600">19 Des 2019</span>
+                        <h4 class="font-bold text-slate-800 mt-1">Seminar Nasional 2019</h4>
+                        <p class="text-xs text-slate-500 mt-1">STMIK Bani Saleh &amp; Kopertip • Inovasi TI &amp; Teknologi Pembelajaran</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="absolute bottom-0 left-1/3 w-80 h-80 bg-pastelPink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-softYellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Left -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-pastelPink-500 bg-pastelPink-100 px-3 py-1 rounded-full">Mari Terhubung</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Siap Bergabung &amp; Berkontribusi Profesional.</h2>
+                    <p class="text-slate-600">
+                        Saya selalu terbuka untuk diskusi mengenai kesempatan kerja di bidang Administrasi, Kesekretariatan, Pengelolaan Data, maupun Operasional Usaha.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <a href="mailto:sitiarum.work@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl glass-card hover:border-pastelPink-400 transition-all group">
+                            <div class="w-10 h-10 rounded-xl bg-pastelPink-200 flex items-center justify-center text-rose-800 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold">EMAIL</p>
+                                <p class="text-sm font-bold text-slate-800">sitiarum.work@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/6285659769992" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl glass-card hover:border-softYellow-400 transition-all group">
+                            <div class="w-10 h-10 rounded-xl bg-softYellow-300 flex items-center justify-center text-amber-800 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold">TELEPON / WHATSAPP</p>
+                                <p class="text-sm font-bold text-slate-800">0856-5976-9992</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl glass-card">
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-semibold">DOMISILI</p>
+                                <p class="text-sm font-bold text-slate-800">Bekasi, Jawa Barat, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Link -->
+                    <div class="pt-2 flex items-center gap-3">
+                        <a href="https://linkedin.com/in/siti-arum" target="_blank" aria-label="LinkedIn Profile" class="px-4 py-2.5 rounded-xl bg-white border border-slate-200 flex items-center gap-2 text-slate-700 hover:bg-pastelPink-200 hover:text-rose-900 transition-all text-xs font-bold shadow-sm">
+                            <i class="fa-brands fa-linkedin text-base"></i> linkedin.com/in/siti-arum
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Right -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-3xl p-8 shadow-md border border-pastelPink-200">
+                        <form id="contact-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                                    <input type="text" id="name" required placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-pastelPink-400 focus:bg-white text-sm transition-all">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Anda</label>
+                                    <input type="email" id="email" required placeholder="email@perusahaan.com" class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-pastelPink-400 focus:bg-white text-sm transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Subjek Pesan</label>
+                                <input type="text" id="subject" placeholder="Peluang Karir / Tawaran Kerjasama" class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-pastelPink-400 focus:bg-white text-sm transition-all">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Pesan</label>
+                                <textarea id="message" rows="4" required placeholder="Tuliskan pesan atau penawaran Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-pastelPink-400 focus:bg-white text-sm transition-all resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-all shadow-md hover:shadow-lg">
+                                Kirim Pesan <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                            </button>
+                        </form>
+
+                        <!-- Feedback Notification Box -->
+                        <div id="form-feedback" class="hidden mt-4 p-4 rounded-xl bg-softYellow-200 text-amber-900 text-sm font-medium text-center">
+                            Pesan Anda berhasil terkirim! Terima kasih telah menghubungi Siti Arum.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-20 pt-8 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+                <p>© 2026 Siti Arum. Seluruh hak cipta dilindungi.</p>
+                
+                <a href="#hero" class="flex items-center gap-2 hover:text-slate-900 transition-colors">
+                    Kembali ke Atas <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 2. Navbar Scroll Padding Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // 3. Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formFeedback.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formFeedback.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
